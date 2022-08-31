@@ -1,0 +1,729 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "event geek",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ScheduleEventIntent",
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "samples": [
+                "{EventName}",
+                "This is {EventName}",
+                "It is a {EventName}",
+                "It is for a {EventName}"
+              ]
+            },
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{EventDate}",
+                "It is on {EventDate}",
+                "It falls on {EventDate}"
+              ]
+            },
+            {
+              "name": "EventTime",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{EventTime}",
+                "It is at {EventTime}",
+                "At {EventTime}"
+              ]
+            }
+          ],
+          "samples": [
+            "Book {EventName} on {EventDate} at {EventTime}",
+            "Schedule {EventName} on {EventDate} at {EventTime}",
+            "Make a placeholder for  {EventName} on {EventDate} at {EventTime}",
+            "I would lile to make a {EventName} event for {EventDate} at {EventTime}",
+            "Please help to schedule an event on {EventDate} at {EventTime} for {EventName}",
+            "I am wanting to book my calendar for  {EventName} on {EventDate} at {EventTime}",
+            "Please help to make an event for {EventName} on {EventDate} at {EventTime}",
+            "Can you please reserve my calendar at {EventTime} on {EventDate} for {EventName}",
+            "Can you please make a reservation for {EventName} on {EventDate} at {EventTime}",
+            "I would like to make a placeholder for {EventName} on {EventTime} at {EventDate}",
+            "Schedule my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Can you please schedule my calendar for  {EventName} on {EventDate} at {EventTime}",
+            "I would like to schedule my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Please make an event on my calendar for {EventName} on {EventDate} at {EventTime}",
+            "I would like to make an event on my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Schedule an event on my calendar for {EventName} on {EventTime} at {EventDate}",
+            "I want to go for a {EventName} on {EventDate} at {EventDate}",
+            "Please reserve my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Can you please reserve my calendar for {EventName} on {EventDate} at {EventTime}",
+            "I would like to reserve my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Can you book an event on my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Please book an event on my calendar for {EventName} on {EventDate} at {EventTime}",
+            "Book an event for {EventName} on {EventDate} at {EventTime}",
+            "Make an event {EventName} on {EventDate} at {EventTime}",
+            "Schedule an an event {EventName} on {EventDate} at {EventTime}"
+          ]
+        },
+        {
+          "name": "DeleteEventIntent",
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "samples": [
+                "{EventName}",
+                "It is {EventName}"
+              ]
+            },
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "It is on {EventDate}",
+                "{EventDate}"
+              ]
+            },
+            {
+              "name": "EventTime",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{EventTime}",
+                "It is as {EventTime}"
+              ]
+            }
+          ],
+          "samples": [
+            "Remove {EventName} on {EventDate} at {EventTime}",
+            "Delete {EventName} on {EventDate} at {EventTime}",
+            "Cancel {EventName} on {EventDate} at {EventTime}",
+            "Please cancel {EventName} on {EventDate} at {EventTime}",
+            "Please delete {EventName} on {EventDate} at {EventTime}",
+            "Can you delete the {EventName} I have on {EventDate} at {EventTime}",
+            "Can you cancel the {EventName} I have on {EventDate} at {EventTime}",
+            "Cancel the event for {EventName} on {EventDate} at {EventTime}",
+            "I would like to cancel the {EventName} on {EventDate} at {EventTime}",
+            "I need to delete the {EventName} on {EventDate} at {EventTime}",
+            "Please delete the {EventName} on {EventDate} at {EventTime}",
+            "Please remove the event {EventName} on {EventDate} at {EventTime}",
+            "Could you please delete the {EventName} on {EventDate} at {EventTime} from my calendar",
+            "Can you remove {EventName} on {EventDate} at {EventTime}",
+            "Can you please discard the {EventName} I have on {EventDate} at {EventTime}",
+            "Discard from my calendar the {EventName} I have on {EventDate} at {EventTime}",
+            "Please remove the event {EventName} I have on {EventDate} at {EventTime}",
+            "Delete the event {EventName} on {EventDate} at {EventTime}",
+            "Drop the event {EventName} on {EventDate} at {EventTime}",
+            "Drop {EventName} on {EventDate} at {EventTime}",
+            "Can you drop the event {EventName} on {EventDate} at {EventTime}",
+            "Would you please remove the event {EventName} I have on {EventDate} at {EventTime}",
+            "I want to drop {EventName} on {EventDate} at {EventTime}",
+            "Can you please delete the event {EventName} on {EventDate} at {EventTime}",
+            "Please discard the event {EventName} on {EventDate} at {EventTime}"
+          ]
+        },
+        {
+          "name": "LookupEventNameIntent",
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "samples": [
+                "It is {EventName}",
+                "{EventName}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            }
+          ],
+          "samples": [
+            "Can you look up {EventName}",
+            "Can you lookup {EventName}",
+            "Please look up {EventName}",
+            "Please lookup {EventName}",
+            "When is the {EventName}",
+            "When does the {EventName} fall on",
+            "Can you tell me when the {EventName} is on",
+            "Please lookup the {EventName}",
+            "What date and time is the the {EventName} on",
+            "Check calendar for the {EventName}",
+            "Would you tell me when the {EventName} is on",
+            "Please check my calendar for the {EventName}",
+            "Tell me when the {EventName} is scheduled for",
+            "I am looking for when the {EventName} is scheduled ",
+            "I am looking for when the {EventName} is scheduled for ",
+            "When is this event {EventName} scheduled ",
+            "Can you tell me when {EventName} is scheduled ",
+            "Please lookup my calendar for {EventName}",
+            "Please look up my calendar for {EventName}",
+            "What is the date and time for {EventName}",
+            "In my calendar when is {EventName}",
+            "I am looking to find when {EventName} is on my calendar",
+            "Please respond with details of {EventName}",
+            "Respond with date and time of {EventName}",
+            "Let me know when the {EventName} happens"
+          ]
+        },
+        {
+          "name": "BlockDateEventIntent",
+          "slots": [
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "It is {EventDate}",
+                "{EventDate}"
+              ]
+            }
+          ],
+          "samples": [
+            "I am wanting to block my calendar on {EventDate}",
+            "I would like to keep my calendar blocked for {EventDate}",
+            "Block my calendar on {EventDate} for vacation",
+            "Keep my calendar blocked for {EventDate}",
+            "I would like to block my calendar on {EventDate}",
+            "Can you go ahead and block my calendar on {EventDate}",
+            "Can you please block {EventDate}",
+            "Block the entire day {EventDate}",
+            "BLock {EventDate}",
+            "Please block {EventDate}",
+            "Can you block my calendar on {EventDate}",
+            "Would you block my calendar for {EventDate}",
+            "I would like you to block my calendar for {EventDate}",
+            "Wondering if you can block my calendar for {EventDate}",
+            "I have some new plans please block my calendar for {EventDate}",
+            "I am planning a vacation please block my calendar for {EventDate}",
+            "Can you block my schedule for {EventDate}",
+            "I would like to block my events for {EventDate}",
+            "Please go ahead and block calendar on {EventDate}",
+            "Keep my calendar blocked on {EventDate}",
+            "Help me block my schedule for {EventDate}",
+            "Help me block my calendar for {EventDate}",
+            "Go ahead and block {EventDate}",
+            "Go ahead and block calendar for {EventDate}",
+            "Vacation time planning block calendar for {EventDate}"
+          ]
+        },
+        {
+          "name": "RescheduleEventIntent",
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "samples": [
+                "It is {EventName}",
+                "{EventName}"
+              ]
+            },
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "It is {EventDate}",
+                "{EventDate}"
+              ]
+            },
+            {
+              "name": "EventTime",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{EventTime}"
+              ]
+            },
+            {
+              "name": "EventDateNew",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{EventDateNew}"
+              ]
+            },
+            {
+              "name": "EventTimeNew",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{EventTimeNew}"
+              ]
+            }
+          ],
+          "samples": [
+            "Reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Please reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Can you reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I would like to reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I am wanting to reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Please update the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I would like to change the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Help me to reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Go ahead and reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Go ahead and Please update the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I want to update the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I want to reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Alright I want to update the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I just decided to reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "It is confirmed go ahead and reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I plan to reschedule the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Change the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I would like to change the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Confirming the update of {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Would like to confirm the reschedule of {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Would like to confirm the update of {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Move the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "I would like to move the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Can you move the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}",
+            "Go ahead and move the {EventName} on {EventDate} at {EventTime} to {EventDateNew} at {EventTimeNew}"
+          ]
+        },
+        {
+          "name": "SummaryOfDayIntent",
+          "slots": [
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "{EventDate}"
+              ]
+            }
+          ],
+          "samples": [
+            "Please give me a summary of my day {EventDate}",
+            "Can you summarize my day\u0027s activities on {EventDate}",
+            "Can you give me a summary of {EventDate}",
+            "Please give me a summary of my day on {EventDate}",
+            "Can you summarize my day\u0027s activities for the day {EventDate}",
+            " Can you give me a summary of the events on {EventDate}",
+            "Report the summary of my day {EventDate}",
+            "Give me a synopsis of {EventDate} ",
+            "Give me a synopsis of events on {EventDate} ",
+            "Give me a synopsis of my calendar on {EventDate} ",
+            "Provide me a synopsis of my calendar on {EventDate} ",
+            "Synopsis of my day {EventDate} ",
+            "Suumary of my day {EventDate} ",
+            "What is the synopsis of my day on {EventDate}",
+            "Give me a summary of events on {EventDate}",
+            "Give me a summary of calendar for {EventDate}",
+            "Summarize events on {EventDate}",
+            "Summarize events on {EventDate} for me",
+            "Please summarize events on {EventDate} for me",
+            "Wondering how my day looks like on {EventDate}",
+            "How is my calendar looking on {EventDate}",
+            "Brief me the events on my calendar for {EventDate}",
+            "Provide a brief summary of my day on {EventDate}",
+            "Provide a brief summary of my day {EventDate}",
+            "What events do I have on {EventDate}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Kid\u0027s Playdate"
+              }
+            },
+            {
+              "name": {
+                "value": "Parent\u0027s meeting"
+              }
+            },
+            {
+              "name": {
+                "value": "House cleaning"
+              }
+            },
+            {
+              "name": {
+                "value": "Dental cleaning"
+              }
+            },
+            {
+              "name": {
+                "value": "Sister\u0027s birthday party"
+              }
+            },
+            {
+              "name": {
+                "value": "Baby shower"
+              }
+            },
+            {
+              "name": {
+                "value": "Friend’s wedding"
+              }
+            },
+            {
+              "name": {
+                "value": "Birthday party"
+              }
+            },
+            {
+              "name": {
+                "value": "Doctor’s appointment"
+              }
+            },
+            {
+              "name": {
+                "value": "Haircut"
+              }
+            }
+          ],
+          "name": "EventName"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ScheduleEventIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.827703441693.1318034343616"
+              }
+            },
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.728566035545.624880618152"
+              }
+            },
+            {
+              "name": "EventTime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.728566035545.925017335877"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "LookupEventNameIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.363342135704.1653881249764"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.363342135704.1653881249764.604249807204"
+                }
+              ]
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "DeleteEventIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.800190337313.1310069864440"
+              }
+            },
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.836980544654.863504146727"
+              }
+            },
+            {
+              "name": "EventTime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.800190337313.1120115586574"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "BlockDateEventIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1206047528881.337012197300"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "RescheduleEventIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "EventName",
+              "type": "EventName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923302212540.588233428571"
+              }
+            },
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923302212540.553489953196"
+              }
+            },
+            {
+              "name": "EventTime",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923302212540.892254942120"
+              }
+            },
+            {
+              "name": "EventDateNew",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923302212540.730339398045"
+              }
+            },
+            {
+              "name": "EventTimeNew",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923302212540.1249229946124"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "SummaryOfDayIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "EventDate",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1445369016994.897691324744"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.827703441693.1318034343616",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the event name?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.836980544654.863504146727",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Sorry, what is the date?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.800190337313.1120115586574",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the time of the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.728566035545.624880618152",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you say the date of the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.728566035545.925017335877",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the time of the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.363342135704.1653881249764",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you repeat the event name?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.363342135704.1653881249764.604249807204",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you please say the event name again"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.800190337313.1310069864440",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you say the event name again?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1206047528881.337012197300",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the date to block?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.923302212540.588233428571",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.923302212540.553489953196",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the original date of the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.923302212540.892254942120",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the original time for the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.923302212540.730339398045",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the new date for the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.923302212540.1249229946124",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the new time for the event?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1445369016994.897691324744",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the date to look up?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "53"
+}
